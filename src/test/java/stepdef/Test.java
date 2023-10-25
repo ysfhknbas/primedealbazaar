@@ -51,7 +51,7 @@ public class Test {
 
             int row = datalist.indexOf(eachdata);
             String amazonurl = "https://www.amazon.com/dp/";
-            Driver.getDriver().get(amazonurl+eachdata.get("asin")+"/"+eachdata.get("marketid"));
+            Driver.getDriver().get(amazonurl+eachdata.get("asin")+"/?m="+eachdata.get("marketid"));
             Thread.sleep(1000);
             try {
                 WebElement price2 = Driver.getDriver().findElement(By.xpath("//span[@class='a-price aok-align-center']"));
