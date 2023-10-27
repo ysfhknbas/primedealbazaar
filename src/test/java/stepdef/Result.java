@@ -11,8 +11,8 @@ public class Result {
     @Given("automation for result")
     public void automation_for_result() {
 
-        String path = "./src/test/resources/testdata/database.xlsx";
-        String sheetName = "result";
+        String path = "./src/test/resources/testdata/result.xlsx";
+        String sheetName = "Sheet1";
         ExcelUtils excelUtilsResult = new ExcelUtils(path,sheetName);
 
 

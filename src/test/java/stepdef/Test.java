@@ -21,7 +21,7 @@ public class Test {
 
     List<Map<String,String>> datalist;
     @Given("automation for {string}")
-    public void automation_for(String string) throws InterruptedException {
+    public void automation_for(String seller) throws InterruptedException {
 
 
         //--------------------------------------------
@@ -34,8 +34,8 @@ public class Test {
         //--------------------------------------------
 
 
-        String path = "./src/test/resources/testdata/database.xlsx";
-        String sheetName = string;
+        String path = "./src/test/resources/testdata/"+seller+".xlsx";
+        String sheetName = "Sheet1";
         ExcelUtils excelUtils = new ExcelUtils(path,sheetName);
         datalist = excelUtils.getDataList();
         //WebElement price1 = Driver.getDriver().findElement(By.xpath("//span[@class='a-price aok-align-center']//span[@class='a-offscreen']"));
