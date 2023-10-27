@@ -34,7 +34,7 @@ public class Driver {
             String browser = "chrome";
             if ("chrome".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                driver= new ChromeDriver();
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
