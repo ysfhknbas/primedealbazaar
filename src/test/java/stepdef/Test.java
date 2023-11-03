@@ -62,10 +62,11 @@ public class Test {
 
                 excelUtils.setCellData(price,row+2, (int) runTime+2);
                 String cellcondition = excelUtils.cellBlankorNot(row+2,(int) runTime+2);
+                String cellcondition1 = excelUtils.cellBlankorNot(row+2,(int) runTime+1);
 
 
 
-                if(runTime!=0.0 && cellcondition.equals("int")){
+                if(runTime!=0.0 && cellcondition.equals("int") && cellcondition1.equals("int")){
 
                     double previous = excelUtils.getCellDataint(row+2,(int) runTime+1);
                     double last = excelUtils.getCellDataint(row+2,(int) runTime+2);

@@ -16,15 +16,15 @@ public class Result {
         ExcelUtils excelUtilsResult = new ExcelUtils(path,sheetName);
 
 
-        for(int asinCount=1;asinCount<200;asinCount++){
+        for(int asinCount=1;asinCount<199;asinCount++){
             double min =0.0;
             double max = 100.0;
             excelUtilsResult.setCellData(max,asinCount,15);
             excelUtilsResult.setCellData(min,asinCount,16);
 
             for(int i=0;i<14;i++){
-
-                ExcelUtils excelUtils = new ExcelUtils(path,"seller"+i);
+                String paths = "./src/test/resources/testdata/seller"+i+".xlsx";
+                ExcelUtils excelUtils = new ExcelUtils(paths,"Sheet1");
                 String runtime = excelUtils.getCellData(0,1);
                 double runTime = Double.valueOf(runtime);
                 //System.out.println(runTime);
